@@ -8,6 +8,27 @@
 <body>
     <h1 id="title"></h1>
     <p id="content"></p>
+
+    <form method="POST" action="http://localhost:3000/student" onsubmit="createStudent(event)">
+        <h2>Register a student</h2>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required/>
+        <input type="submit"/>
+    </form>
+    <form method="DELETE" action="http://localhost:3000/student" onsubmit="deleteStudent(event)">
+        <h2>Delete a student</h2>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required/>
+        <input type="submit"/>
+    </form>
+    <form method="UPDATE" action="http://localhost:3000/student" onsubmit="updateStudent(event)">
+        <h2>Edit a student</h2>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required/>
+        <label for="newName">New name</label>
+        <input type="text" name="newName" id="newName" required/>
+        <input type="submit"/>
+    </form>
     <script src="ui.js"></script>
 </body>
 </html>
